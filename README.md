@@ -47,6 +47,9 @@ The server persists using a SQLite3 database named `database.sqlite` in the site
 
 ## Development
 
+This project uses EditorConfig to standardize text editor configuration.  
+Visit http://editorconfig.org for details.
+
 ### Debugging
 
 This project uses https://www.npmjs.com/package/debug for development logging. To start `nodemon` and enable logging:
