@@ -121,4 +121,39 @@ describe('Reservations Library', function() {
         .catch(error => done(error));
     });
   });
+
+  context('Save', function() {
+    let dbMock;
+
+    before(function() {
+      dbMock = sinon.mock(db);
+    });
+
+    after(function() {
+      dbMock.restore();
+    });
+
+    it('should only call the database once', function() {
+      dbMock.expects('run')
+        .once();
+
+      reservations = proxyquire('../../../lib/reservations', {
+        debug: debugStub,
+        sqlite: dbMock
+      });
+
+      const reservation = {
+        datetime: '2017-06-10T06:02:00.000Z',
+        party: 4,
+        name: 'Family',
+        email: 'username@example.com',
+        message: undefined,
+        phone: undefined
+      };
+
+      reservations.save(reservation);
+
+      dbMock.verify();
+    });
+  });
 });
