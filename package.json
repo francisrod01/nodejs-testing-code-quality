@@ -9,7 +9,8 @@
   "scripts": {
     "debug": "cross-env DEBUG=nadia:* nodemon",
     "eslint": "eslint",
-    "start": "node bin/www"
+    "start": "node bin/www",
+    "test": "mocha"
   },
   "dependencies": {
     "basic-auth": "^1.1.0",
