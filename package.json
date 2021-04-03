@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-testing-code-quality",
+  "version": "0.0.1",
+  "description": "Node.js: Testing and Code Quality",
+  "main": "bin/www",
+  "repository": "git@github.com:francisrod01/nodejs-testing-code-quality.git",
+  "author": "Francis Rodrigues",
+  "license": "MIT",
+  "scripts": {
+    "debug": "cross-env DEBUG=nadia:* nodemon",
+    "start": "node bin/www"
+  },
+  "dependencies": {
+    "basic-auth": "^1.1.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "joi": "^10.6.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "morgan": "~1.8.1",
+    "node-env": "^0.1.6",
+    "pug": "^2.0.0-rc.2",
+    "serve-favicon": "~2.4.2",
+    "sqlite": "^2.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "nodemon": "^1.11.0"
+  }
+}

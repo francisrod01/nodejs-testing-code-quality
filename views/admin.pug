@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div#page
+    h1= title
+    table
+      thead
+        tr
+          each val in header
+            th= val
+      tbody
+        each row in reservations
+          tr
+            each val in row
+              td= val

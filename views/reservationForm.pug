@@ -1,0 +1,58 @@
+.rtb-booking-form
+  if errors
+    .rtb-message.error
+      | Sorry, there was a problem with your booking request.
+      ul
+        for error in errors
+          li!= error
+  if success
+    .rtb-message
+      | Thanks, your booking request ##{reservationId} is waiting to be confirmed. Updates will be sent to the email address you provided.
+  else
+    form(method='POST', action='')
+      fieldset.reservation
+        legend
+          | Book a table
+        .rtb-text.date
+          label(for='date')
+            | Date
+          input#rtb-date(type='text', name='date', value=(undefined === submission ? '' : submission.date), required='', aria-required='true')
+        .rtb-text.time
+          label(for='time')
+            | Time
+          input#rtb-time(type='text', name='time', value=(undefined === submission ? '' : submission.time), required='', aria-required='true')
+        .rtb-select.party
+          label(for='party')
+            | Party
+          select#rtb-party(name='party', value=(undefined === submission ? '' : submission.date), required='', aria-required='true')
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+            option(value='6') 6
+            option(value='7') 7
+            option(value='8') 8
+      fieldset.contact
+        legend
+          | Contact Details
+        .rtb-text.name
+          label(for='name')
+            | Name
+          input#rtb-name(type='text', name='name', value=(undefined === submission ? '' : submission.name), required='', aria-required='true')
+        .rtb-text.email
+          label(for='email')
+            | Email
+          input#rtb-email(type='text', name='email', value=(undefined === submission ? '' : submission.email), required='', aria-required='true')
+        .rtb-text.phone
+          label(for='phone')
+            | Phone
+          input#rtb-phone(type='tel', name='phone', value=(undefined === submission ? '' : submission.phone))
+        .add-message
+          a(href='/##')
+            | Add a Message
+        .rtb-textarea.message
+          label(for='message')
+            | Message
+          textarea#rtb-message(name='message') #{(undefined === submission ? '' : submission.message)}
+      button(type='submit') Request Booking

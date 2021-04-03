@@ -1,0 +1,101 @@
+doctype html
+html.no-js(lang='en-US')
+  head
+    title Reservations – Nadia's Garden
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='dns-prefetch', href='//fonts.googleapis.com/')
+    link#genericons-css(rel='stylesheet', href='/contrib/css/genericons/genericons.css')
+    link#wm-google-fonts-css(rel='stylesheet', href='//fonts.googleapis.com/css?family=Playfair+Display%7CDroid+Serif&subset&ver=2.2.0')
+    link#wm-main-css(rel='stylesheet', href='/contrib/css/main.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link#wm-stylesheet-css(rel='stylesheet', href='/contrib/css/style.css')
+    script(src='/contrib/js/jquery/jquery.js')
+  body#top.has-post-thumbnail.is-singular.not-front-page.page.page-id-10.page-template-default
+    #page.hfeed.site
+      header#masthead.site-header(role='banner', itemscope='', itemtype='https://schema.org/WPHeader')
+        .site-header-inner
+          .site-branding
+            h2.screen-reader-text Reservations – Nadia's Garden
+            a#site-title.site-title.logo.type-text(href='/', title="Nadia's Garden", rel='home')
+              span.text-logo Nadia's Garden
+          nav#site-navigation.main-navigation(role='navigation', aria-labelledby='site-navigation-label', itemscope='', itemtype='https://schema.org/SiteNavigationElement')
+            h2#site-navigation-label.screen-reader-text Primary Menu
+            #main-navigation-inner.main-navigation-inner
+              .menu
+                ul
+                  li#menu-item-75.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-75
+                    a(href='/') Home
+                  li#menu-item-76.menu-item.menu-item-type-post_type.menu-item-object-page.current-menu-item.page_item.page-item-10.current_page_item.menu-item-76.active-menu-item
+                    a(href='reservations') Reservations
+            button#menu-toggle.menu-toggle(aria-controls='site-navigation', aria-expanded='false') Menu
+      #content.site-content
+        #primary.content-area
+          main#main.site-main.clearfix(role='main', itemprop='mainContentOfPage')
+            article#post-10.post-10.page.type-page.status-publish.has-post-thumbnail.hentry.entry(role='article', itemscope='', itemtype='https://schema.org/WebPage')
+              meta(itemscope='', itemprop='mainEntityOfPage', itemtype='https://schema.org/WebPage')
+              .entry-media
+                figure.post-thumbnail(itemprop='image', itemscope='', itemtype='https://schema.org/ImageObject')
+                  a
+                    img.attachment-large.size-large.wp-post-image(width='632', height='422', src='/images/Interior-184668449-1024x683.jpg', alt="Nadia's Garden Interior shot", srcset='/images/Interior-184668449-1024x683.jpg 1024w, /images/Interior-184668449-300x200.jpg 300w', sizes='(max-width: 632px) 100vw, 632px')
+                    meta(itemprop='url', content='/images/Interior-184668449-1024x683.jpg')
+                    meta(itemprop='width', content='true')
+                    meta(itemprop='height', content='true')
+              header.entry-header
+                h1.entry-title(itemprop='headline') Reservations
+              .entry-content(itemprop='description')
+                p
+                  | To make reservations please fill out the following form or call us at
+                  a(href='tel:123-456-7890') 123-456-7890
+                  | .
+                p
+                  | We can host your large private or corporate party! For more information about reserving space for events of 40 people or more, call, fill out or contact form, or come visit us in person.
+
+                include reservationForm
+
+            aside#secondary.widget-area.sidebar(role='complementary', aria-labelledby='sidebar-label', itemscope='', itemtype='https://schema.org/WPSideBar')
+              h2#sidebar-label.screen-reader-text Sidebar
+              a#toggle-mobile-sidebar.toggle-mobile-sidebar.button(href='/##', aria-controls='secondary', aria-expanded='false') Toggle sidebar
+              #text-4.widget.widget_text
+                h3.widget-title Welcome to Nadia’s Garden Restaurant
+                .textwidget
+                  | Nadia’s Garden Restaurant isn’t just about dining. We’re about creating memorable experiences that our guest will cherish! Our family friendly restaurant has indoor, outdoor, and intimate dining options for any occasion. Our outdoor garden area is perfect for a stroll before or after your meal. We invite you to come dine with us!
+          // /#main
+        // /#primary
+      // /#content
+      footer#colophon.site-footer(itemscope='', itemtype='https://schema.org/WPFooter')
+        .site-footer-area.footer-area-footer-widgets
+          #footer-widgets.footer-widgets.clearfix
+            aside#footer-widgets-container.widget-area.footer-widgets-container(role='complementary', aria-labelledby='sidebar-footer-label')
+              h2#sidebar-footer-label.screen-reader-text Footer sidebar
+              #media_image-3.widget.widget_media_image
+                figure.wp-caption.alignnone(style='width: 600px')
+                  img.image.wp-image-68.alignnone.attachment-full.size-full(width='600', height='428', src='/images/Exterior-178856892.jpg', alt="Nadia's Garden Restaurant in Carpinteria, California", style='max-width: 100%; height: auto;')
+                  figcaption.wp-caption-text Romantic Restaurant
+              #widget_contact_info-4.widget.widget_contact_info
+                h3.widget-title Hours & Info
+                .confit-address
+                  a(href='https://maps.google.com/maps?z=16&q=6410+via+real+carpinteria,+ca+93013', target='_blank')
+                    | 6410 Via Real
+                    br
+                    | Carpinteria, CA 93013
+                .confit-phone 1-123-456-7890
+                .confit-hours
+                  | Lunch: 11am - 2pm
+                  br
+                  | Dinner: M-Th 5pm - 11pm, Fri-Sat:5pm - 1am
+    // /#page
+    link#rtb-booking-form-css(rel='stylesheet', href='/contrib/css/booking-form.css')
+    link#pickadate-default-css(rel='stylesheet', href='/contrib/css/pickadate/default.css')
+    link#pickadate-date-css(rel='stylesheet', href='/contrib/css/pickadate/default.date.css')
+    link#pickadate-time-css(rel='stylesheet', href='/contrib/css/pickadate/default.time.css')
+    script(src='/contrib/js/imagesloaded.min.js')
+    script(src='/contrib/js/scripts-global.js')
+    script(src='/contrib/js/skip-link-focus-fix.js')
+    script(src='/contrib/js/pickadate/picker.js')
+    script(src='/contrib/js/pickadate/picker.date.js')
+    script(src='/contrib/js/pickadate/picker.time.js')
+    script(src='/contrib/js/pickadate/legacy.js')
+    script(src='/js/reservations.js')
+    script(src='/contrib/js/scripts-navigation.js')
+    script(src='/contrib/js/booking-form.js')
