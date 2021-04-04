@@ -104,16 +104,14 @@ describe('Reservations Library', function() {
 
       reservations.create(reservation)
         .then(() => {
-          validateSpy.should
-            .have.been.calledOnce
-            .and.been.calledWith({
-              datetime: '2017-06-10T06:02:00.000Z',
-              party: 4,
-              name: 'Family',
-              email: 'username@example.com',
-              message: undefined,
-              phone: undefined
-            });
+          validateSpy.calledOnceWith({
+            datetime: '2017-06-10T06:02:00.000Z',
+            party: 4,
+            name: 'Family',
+            email: 'username@example.com',
+            message: undefined,
+            phone: undefined
+          });
 
           validateSpy.restore();
           done();
